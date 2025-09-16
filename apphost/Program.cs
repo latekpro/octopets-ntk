@@ -25,7 +25,8 @@ else
     .WithReference(api)
     .WaitFor(api)
     .WithHttpEndpoint(env: "PORT")
-    .WithEnvironment("BROWSER", "none");
+    .WithEnvironment("BROWSER", "none")
+    .WithEnvironment("REACT_APP_USE_MOCK_DATA", "false");
 }
 
 builder.Build().Run(); 
